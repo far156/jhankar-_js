@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubble</title>
+</head>
+<body>
+    <h2>
+        Event Bubble
+    </h2>
+    <section id="section-container">
+        <h4>
+            babbul vai
+            </h4>
+           <ul id="list-container">
+            <li class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, aliquam. Rem, possimus. Fuga qui perferendis quis ut reiciendis amet illum atque libero, suscipit ipsam a maiores aperiam repellendus deleniti asperiores.
+
+
+            </li>
+            <li  id='second-item'class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, aliquam. Rem, possimus. Fuga qui perferendis quis ut reiciendis amet illum atque libero, suscipit ipsam a maiores aperiam repellendus deleniti asperiores.
+                
+
+            </li>
+            <li class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, aliquam. Rem, possimus. Fuga qui perferendis quis ut reiciendis amet illum atque libero, suscipit ipsam a maiores aperiam repellendus deleniti asperiores.
+                
+
+            </li>
+            <li class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, aliquam. Rem, possimus. Fuga qui perferendis quis ut reiciendis amet illum atque libero, suscipit ipsam a maiores aperiam repellendus deleniti asperiores.
+                
+
+            </li>
+            <li class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, aliquam. Rem, possimus. Fuga qui perferendis quis ut reiciendis amet illum atque libero, suscipit ipsam a maiores aperiam repellendus deleniti asperiores.
+                
+
+            </li>
+            <li class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, aliquam. Rem, possimus. Fuga qui perferendis quis ut reiciendis amet illum atque libero, suscipit ipsam a maiores aperiam repellendus deleniti asperiores.
+                
+
+            </li>
+
+           </ul>
+           <script>
+            
+            document.getElementById('second-item').addEventListener('click',function(){
+                console.log('second item clicked');
+            })
+            //ul
+            document.getElementById('list-container').addEventListener('click',function(){
+                console.log('ul clicked');
+            })
+            //section -container
+            document.getElementById('section-container').addEventListener('click',function(){
+                console.log('section  item clicked');
+            })
+            document.getElementById('second-item').addEventListener('click',function(event){
+                event.stopPropagation();
+                console.log('second item clicked');
+            })
+            //stop propagation for stop bubble
+            
+
+           </script>
+
+    
+
+    </section>
+
+</body>
+</html>

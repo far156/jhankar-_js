@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>more events</title>
+</head>
+<body>
+    <h2>
+        more events
+    </h2>
+
+    <section>
+        <h3 id="secret-thing">
+            very very important  secret information
+        </h3>
+        <input  id='delete -confirm'type="text" placeholder="please type delete">
+        <button id="delete-btn" disabled>
+            Delete
+        </button>
+    </section>
+    <script>
+        document.getElementById('delete-btn').addEventListener('click',function(){
+            document.getElementById('secret-thing').style.display='none';
+
+        });
+        //focus
+
+
+        document.getElementById('delete-confirm').addEventListener('focus',function(){
+            
+           
+            document.body.style.backgroundColor='lightcoral';
+
+        });
+        //blur
+
+
+        document.getElementById('delete-confirm').addEventListener('blur',function(){
+            
+           
+            document.body.style.backgroundColor='white';
+
+        });
+
+        //keydown
+
+
+        document.getElementById('delete-confirm').addEventListener('keydown',function(){
+            const deletefeild=document.getElementById('delete-confirm');
+            console.log(deletefeild.Value);
+            
+           
+            document.body.style.backgroundColor='white';
+
+
+
+        });
+
+         //keypress
+
+
+         document.getElementById('delete-confirm').addEventListener('keypress',function(){
+            const deletefeild=document.getElementById('delete-confirm');
+            console.log(deletefeild.Value);
+            
+           
+            document.body.style.backgroundColor='white';
+
+            
+
+        });
+        //keyup
+
+
+        document.getElementById('delete-confirm').addEventListener('keyup',function(){
+            const deletefeild=document.getElementById('delete-confirm');
+            console.log(deletefeild.Value);
+            
+           
+            document.body.style.backgroundColor='white';
+
+            
+
+        });
+
+
+
+        //change
+
+
+        document.getElementById('delete-confirm').addEventListener('change',function(){
+            const deletefeild=document.getElementById('delete-confirm');
+            console.log(deletefeild.Value);
+            
+           
+            document.body.style.backgroundColor='white';
+
+            
+
+        });
+
+         //change
+
+
+         document.getElementById('delete-confirm').addEventListener('change',function(event){
+            const deleteBtn=document.getElementById('delete-btn');
+            if(event.target.Value=='delete'){
+             deleteBtn.   document.getElementById('delete-btn').removeAttribute('disabled');
+
+            }
+            else{
+                deleteBtn.setAttribute('disabled',true)
+
+            }
+           // const deletefeild=document.getElementById('delete-confirm');
+           // console.log(deletefeild.Value);
+            
+           
+           // document.body.style.backgroundColor='white';
+
+           console.log(event); 
+
+        });
+
+    </script>
+    
+</body>
+</html>
+
+
+

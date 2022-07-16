@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegate event</title>
+    <!-- delegate hoccey  -->
+</head>
+<body>
+    <h2>event delegate</h2>
+    <ul id="item-container">
+        <li class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum enim omnis sequi ad sapiente minima! Impedit ex quibusdam magnam unde maxime velit facere iste, tempora, necessitatibus mollitia hic cumque totam?
+
+        </li>
+        <li class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum enim omnis sequi ad sapiente minima! Impedit ex quibusdam magnam unde maxime velit facere iste, tempora, necessitatibus mollitia hic cumque totam?
+
+        </li>
+        <li class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum enim omnis sequi ad sapiente minima! Impedit ex quibusdam magnam unde maxime velit facere iste, tempora, necessitatibus mollitia hic cumque totam?
+
+        </li>
+        <li class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum enim omnis sequi ad sapiente minima! Impedit ex quibusdam magnam unde maxime velit facere iste, tempora, necessitatibus mollitia hic cumque totam?
+
+        </li>
+        <li class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum enim omnis sequi ad sapiente minima! Impedit ex quibusdam magnam unde maxime velit facere iste, tempora, necessitatibus mollitia hic cumque totam?
+
+        </li>
+        <li class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum enim omnis sequi ad sapiente minima! Impedit ex quibusdam magnam unde maxime velit facere iste, tempora, necessitatibus mollitia hic cumque totam?
+
+        </li>
+        <li class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum enim omnis sequi ad sapiente minima! Impedit ex quibusdam magnam unde maxime velit facere iste, tempora, necessitatibus mollitia hic cumque totam?
+
+        </li>
+    </ul>
+    <script>
+        const items=document.getElementsByClassName('item');
+        for(const item of items){
+            
+            item.addEventListener('click',function(){
+               document.getElementById('item-container') 
+               removeChild(item);
+
+            });
+        } 
+
+    </script>
+</body>
+</html>

@@ -52,6 +52,25 @@ const input='560';
 const inputNum=+input;
 console.log(inputNum);
 
-//
+//shorto diye function call
 const isActive=true;
-const 
+const ShowUser=()=>console.log('display User');
+const hideUser=()=>console.log('hate user');
+isActive?ShowUser():hideUser();//mitha or sotto
+isActive && ShowUser();
+//duiside shotto
+//mithha jonno if the left side is false then right will be executed
+isActive||ShowUser();
+
+isActive|| hideUser();
+
+isActive=!isActive
+//toggle boolean
+
+
+
+
+
+
+
+

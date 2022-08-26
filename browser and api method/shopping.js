@@ -1,6 +1,51 @@
+
+const displayLocalStorageCart=()=>{
+const cart=getCart();
+for (const name in cart){
+    displayProduct(name);
+
+}
+}
+
+const placeOrder=()=>{
+    document.getElementById('products').textContent='';
+    localStorage.removeItem('cart');
+}
+displayLocalStorageCart();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const addItem=()=>{
     const nameField=name.nameField=document.getElementById('product-name');
     const name=nameField.value;
+    if(!name){
+        return;
+    }
+    //display in ui
+    displayProduct(name);
+
+    //add to local storage
+    addProductTocart(name);
 
 
     nameField.value='';
@@ -29,6 +74,9 @@ const getCart=()=>{
 }
 const addProductTocart=name=>{
     const cart=getCart();
+    if(cart[name]){
+        cart[nmae]=cart[name]+1;
+    }
     cart[name]=1;
     const cartStringfield=JSON.stringify(cart);
     localStorage.setItem('cart',cartStringfield)
